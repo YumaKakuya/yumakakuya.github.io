@@ -177,6 +177,7 @@
       background:var(--bg2); padding:28px 28px 28px 32px;
       position:relative; overflow:hidden;
       transition: background 0.3s;
+      cursor: default;
     }
     .card:hover { background:var(--bg3); }
     .card::before {
@@ -355,7 +356,7 @@
       <div class="cards">
 
         <!-- Sorted.Tools -->
-        <div class="card">
+        <div class="card" style="cursor:pointer;" onclick="window.open('https://yumakakuya.github.io/sorted-tools/','_blank')">
           <div class="card-head">
             <div class="card-name">Sorted.<em>Tools</em></div>
             <span class="badge b-coming">Coming Soon</span>
