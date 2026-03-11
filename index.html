@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yuma Kakuya — Builder</title>
   <meta name="description" content="Indie hacker building tools for app developers. Creator of Sorted.Tools." />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-12F25EZ0PG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-12F25EZ0PG');
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
   <style>
@@ -204,10 +212,17 @@
     }
     .b-building { color:var(--gold); border-color:var(--gold-dim); }
     .b-coming   { color:var(--text-dim); border-color:var(--border); }
-    .b-live     { color:var(--green); border-color:var(--green); }
+    .b-live     { color:#00ff9d; border-color:rgba(0,255,157,0.5); }
 
     .card-desc { font-size:13px; line-height:1.9; color:var(--text); margin-bottom:16px; }
     .card-desc .hl { color:var(--gold); }
+    .card-cta {
+      display:inline-block; margin-top:12px;
+      font-size:10px; letter-spacing:0.2em; text-transform:uppercase;
+      color:var(--gold); text-decoration:none;
+      transition:color 0.2s;
+    }
+    .card-cta:hover { color:var(--text); }
 
     /* Tool list */
     .tool-list { display:grid; gap:0; border:1px solid var(--border); margin-bottom:16px; }
@@ -314,7 +329,7 @@
 
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-eyebrow">@KakuyaYuma — AXIS.</div>
+      <div class="hero-eyebrow">@null_founder — Sorted.</div>
       <h1 class="hero-name">Yuma<em>Kakuya</em></h1>
       <div class="hero-sub">Indie Hacker · Shipping in Public · Japan</div>
       <p class="hero-desc">
@@ -342,7 +357,7 @@
         management, communication, and problem-solving
         in the most unforgiving environment possible.<br><br>
         After bankruptcy, I started over —
-        this time building <span class="hl">AI-powered tools</span> under my own label <span class="hl">AXIS.</span><br><br>
+        this time building <span class="hl">AI-powered tools</span> under my own label <span class="hl">Sorted.</span><br><br>
         The business knowledge most developers lack?
         That's what I've been living for 25 years.
         Now I'm packaging it into software.
@@ -356,21 +371,21 @@
 
       <div class="cards">
 
-        <!-- Sorted.Tools -->
-        <div class="card" style="cursor:pointer;" onclick="window.open('https://yumakakuya.github.io/sorted-tools/','_blank')">
+        <!-- Sorted.ToolsPro -->
+        <div class="card" style="cursor:pointer;" onclick="window.open('https://sorted-portal.vercel.app','_blank')">
           <div class="card-head">
-            <div class="card-name">Sorted.<em>Tools</em></div>
-            <span class="badge b-coming">Coming Soon</span>
+            <div class="card-name">Sorted.<em>ToolsPro</em></div>
+            <span class="badge b-coming">Portal</span>
           </div>
           <p class="card-desc">
             AI prompt toolkit for indie app developers. Form in, prompt out.
             <span class="hl">Revenue forecasts. ASO. Pitch decks. Pricing. Competitor research.</span>
-            Five tools. One series. $9.99 one-time.
+            $14.99 one-time (per tool).
           </p>
 
           <div class="tags">
             <span class="tag">Series 1 of 3</span>
-            <span class="tag">$9.99 one-time</span>
+            <span class="tag">$14.99 one-time (per tool)</span>
             <span class="tag">Local-first</span>
           </div>
 
@@ -424,6 +439,7 @@
               <span class="s-status ss-later">Planned</span>
             </div>
           </div>
+          <a href="https://sorted-portal.vercel.app" target="_blank" rel="noopener" class="card-cta" onclick="event.stopPropagation()">Upgrade →</a>
         </div>
 
         <!-- Sorted.Cowork -->
@@ -435,7 +451,7 @@
           <p class="card-desc">
             Prompt toolkit for Claude Cowork users. Form in, delegation prompt out.
             <span class="hl">File organization. Task automation. Structured instructions.</span>
-            Built for non-coders who want Cowork to actually work.
+            Built for non-coders who want Cowork to actually work. Free release available now.
           </p>
           <div class="tags">
             <span class="tag">Cowork Series</span>
@@ -449,19 +465,37 @@
               <span class="tool-status ts-next">v1.0.0 Live</span>
             </div>
           </div>
+          <a href="https://yumakakuya.github.io/sorted-cowork/" target="_blank" rel="noopener" class="card-cta" onclick="event.stopPropagation()">Try Free →</a>
         </div>
 
-        <!-- AXIOM. -->
-        <div class="card">
+        <!-- RuleForge -->
+        <div class="card" style="cursor:pointer;" onclick="window.open('https://yumakakuya.github.io/sorted-ruleforge/','_blank')">
+          <div class="card-head">
+            <div class="card-name">Sorted.<em>RuleForge</em></div>
+            <span class="badge b-live">Live (Free)</span>
+          </div>
+          <p class="card-desc">
+            AI agent config generator. Generate AGENTS.md instantly.
+            CLAUDE.md / .cursorrules / SKILL.md unlocking soon.
+          </p>
+          <div class="tags">
+            <span class="tag">Agent config</span>
+            <span class="tag">Free preview</span>
+          </div>
+          <a href="https://yumakakuya.github.io/sorted-ruleforge/" target="_blank" rel="noopener" class="card-cta" onclick="event.stopPropagation()">Try Free →</a>
+        </div>
+
+        <!-- Veto. -->
+        <div class="card" style="cursor:pointer;" onclick="window.open('https://axiom-waitlist.vercel.app','_blank')">
           <div class="card-head">
             <div class="card-name">Veto.</div>
-            <span class="badge b-coming">Coming</span>
+            <span class="badge b-building">Waitlist Open</span>
           </div>
-          <p class="card-desc">Something is in motion. Details when it's ready.</p>
-          <div class="redact">
-            <span class="redact-line">░░░ DETAILS WITHHELD ░░░</span>
+          <p class="card-desc">App Store rejection countermeasure tool. Pre-review checks, post-reject fixes, policy builder.</p>
+          <div class="tags">
+            <span class="tag">$120 one-time</span>
           </div>
-          <div class="redact-bar"></div>
+          <a href="https://axiom-waitlist.vercel.app" target="_blank" rel="noopener" class="card-cta" onclick="event.stopPropagation()">Join Waitlist →</a>
         </div>
 
         <!-- Void. -->
@@ -521,9 +555,9 @@
       <div class="sec-eyebrow">04 — Contact / 連絡先</div>
       <div class="sec-title">Find <em>me</em></div>
       <div class="link-grid">
-        <a class="link-card" href="https://x.com/KakuyaYuma" target="_blank" rel="noopener">
+        <a class="link-card" href="https://x.com/null_founder" target="_blank" rel="noopener">
           <span class="li">𝕏</span>
-          <div><div class="ln">X / Twitter</div><div class="lh">@KakuyaYuma</div></div>
+          <div><div class="ln">X / Twitter</div><div class="lh">@null_founder</div></div>
         </a>
         <a class="link-card" href="https://github.com/Yumakakuya" target="_blank" rel="noopener">
           <span class="li">⌥</span>
@@ -533,15 +567,15 @@
           <span class="li">in</span>
           <div><div class="ln">LinkedIn</div><div class="lh">侑磨・角谷</div></div>
         </a>
-        <a class="link-card" href="mailto:yuma@axis.com">
+        <a class="link-card" href="mailto:yuma@protocolaxiom.com">
           <span class="li">✉</span>
-          <div><div class="ln">Email</div><div class="lh">AXIS.</div></div>
+          <div><div class="ln">Email</div><div class="lh">yuma@protocolaxiom.com</div></div>
         </a>
       </div>
     </section>
 
     <footer class="footer">
-      <div class="footer-txt"><span class="hl">AXIS.</span> — Yuma Kakuya · Shipping in Public · 2026</div>
+      <div class="footer-txt"><span class="hl">Sorted.</span> by Kakuya Yuma · yuma@protocolaxiom.com · 2026</div>
     </footer>
 
   </div>
